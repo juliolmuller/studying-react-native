@@ -1,13 +1,15 @@
-node_modules/**/*
-.expo/*
-npm-debug.*
-*.jks
-*.p8
-*.p12
-*.key
-*.mobileprovision
-*.orig.*
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+.DS_Store/
+.vscode/
+node_modules/
+
+.production/
+.expo/
+build/
 web-build/
 
-# macOS
-.DS_Store
+.env*
+!.env.example
+
+*.log
