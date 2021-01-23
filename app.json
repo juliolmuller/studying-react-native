@@ -1,14 +1,14 @@
 {
   "expo": {
-    "name": "notes",
-    "slug": "notes",
+    "name": "CRUD React Native",
+    "slug": "crud-react-native",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
+    "icon": "./src/images/icon.png",
     "splash": {
-      "image": "./assets/splash.png",
-      "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
+      "backgroundColor": "#8257e5",
+      "image": "./src/images/splash.png",
+      "resizeMode": "cover"
     },
     "updates": {
       "fallbackToCacheTimeout": 0
@@ -16,17 +16,17 @@
     "assetBundlePatterns": [
       "**/*"
     ],
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./src/images/adaptive-icon.png",
+        "backgroundColor": "#ffffff",
+      },
+    },
     "ios": {
       "supportsTablet": true
     },
-    "android": {
-      "adaptiveIcon": {
-        "foregroundImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "#FFFFFF"
-      }
-    },
     "web": {
-      "favicon": "./assets/favicon.png"
+      "favicon": "./src/images/favicon.png"
     }
   }
 }
