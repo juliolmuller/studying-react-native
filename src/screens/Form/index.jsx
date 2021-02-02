@@ -1,12 +1,14 @@
-import React, { useContext, useEffect, useState } from 'react'
-import { TextInput, SafeAreaView, ScrollView } from 'react-native'
+import React, { useContext, useEffect, useRef, useState } from 'react'
+import { SafeAreaView, ScrollView, View } from 'react-native'
 import { RectButton } from 'react-native-gesture-handler'
 import { useNavigation, useRoute } from '@react-navigation/native'
 import { Feather } from '@expo/vector-icons'
 import { NotesContext } from '../../contexts'
+import TextInput from './TextInput'
 import styles from './styles'
 
 const Form = () => {
+  const bodyTextInput = useRef()
   const noteId = useRoute().params
   const { goBack } = useNavigation()
   const { notes } = useContext(NotesContext)
@@ -33,15 +35,19 @@ const Form = () => {
       </RectButton>
 
       <TextInput
-        style={[styles.titleInput, title ? {} : styles.placeholder]}
+        size={32}
         placeholder="Título"
+        onSubmitEditing={() => bodyTextInput.current.focus()}
         onChangeText={setTitle}
         value={title}
-        multiline
+        autoFocus={!noteId}
+        blurOnSubmit={false}
       />
+      <View style={styles.separator} />
       <ScrollView style={styles.bodyContainer}>
         <TextInput
-          style={[styles.bodyInput, body ? {} : styles.placeholder]}
+          size={20}
+          ref={bodyTextInput}
           placeholder="Escreva sua nota"
           onChangeText={setBody}
           value={body}

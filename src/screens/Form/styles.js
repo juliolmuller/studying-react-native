@@ -21,25 +21,12 @@ export default StyleSheet.create({
     borderRadius: 35,
     elevation: 10,
   },
-  placeholder: {
-    fontStyle: 'italic',
-  },
-  titleInput: {
-    padding: 10,
-    borderBottomWidth: 1,
-    borderBottomColor: 'white',
-    color: 'white',
-    fontSize: 32,
-    fontStyle: 'normal',
+  separator: {
+    height: 1,
+    marginTop: 5,
+    backgroundColor: 'white',
   },
   bodyContainer: {
-    paddingHorizontal: 10,
-    paddingVertical: 30,
-  },
-  bodyInput: {
-    lineHeight: 30,
-    color: 'white',
-    fontSize: 20,
-    fontStyle: 'normal',
+    paddingVertical: 20,
   },
 })
