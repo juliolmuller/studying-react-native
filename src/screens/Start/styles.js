@@ -16,14 +16,8 @@ export default StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'center',
-    backgroundColor: theme.color.tertiary,
+    backgroundColor: theme.color.primary,
     borderRadius: 35,
     elevation: 10,
-  },
-  roundedBtnText: {
-    marginLeft: 8,
-    color: 'white',
-    textTransform: 'uppercase',
-    fontSize: 20,
   },
 })

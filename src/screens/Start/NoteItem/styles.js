@@ -5,20 +5,21 @@ export default StyleSheet.create({
   itemWrapper: {
     height: 100,
     padding: 10,
-    marginBottom: -1,
-    borderTopWidth: 1,
     borderBottomWidth: 1,
     borderTopColor: theme.color.primary,
     borderBottomColor: theme.color.primary,
     backgroundColor: theme.color.secondary,
     justifyContent: 'center',
+    elevation: 10,
   },
   itemTitle: {
     marginBottom: 8,
+    color: 'black',
     fontSize: 28,
     fontWeight: 'bold',
   },
   itemDate: {
+    color: 'white',
     fontSize: 14,
     fontStyle: 'italic',
   },

@@ -1,5 +1,5 @@
 import React, { useContext } from 'react'
-import { FlatList, Text, SafeAreaView } from 'react-native'
+import { FlatList, SafeAreaView } from 'react-native'
 import { RectButton } from 'react-native-gesture-handler'
 import { useNavigation } from '@react-navigation/native'
 import { Feather } from '@expo/vector-icons'
@@ -28,7 +28,7 @@ const Start = () => {
           <NoteItem
             note={item}
             onDelete={() => handleDelete(item.id)}
-            onPress={() => navigate('Form', item)}
+            onPress={() => navigate('Form', item.id)}
           />
         )}
       />

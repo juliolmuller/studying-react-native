@@ -1,8 +1,10 @@
 import React from 'react'
-import { Text } from 'react-native'
+import { Text, TouchableNativeFeedback, View } from 'react-native'
 import { RectButton, Swipeable } from 'react-native-gesture-handler'
 import { Feather } from '@expo/vector-icons'
 import styles from './styles'
+
+const rippleEffect = TouchableNativeFeedback.Ripple(null, false)
 
 const NoteItem = ({ note, onDelete, onPress }) => {
   const SwipeAction = () => (
@@ -20,12 +22,14 @@ const NoteItem = ({ note, onDelete, onPress }) => {
       renderLeftActions={SwipeAction}
       renderRightActions={SwipeAction}
     >
-      <RectButton style={styles.itemWrapper} onPress={onPress}>
-        <Text style={styles.itemTitle}>{note.title}</Text>
-        <Text style={styles.itemDate}>
-          Criado em {note.createdAt.getDate()}/{note.createdAt.getMonth()}/{note.createdAt.getFullYear()}
-        </Text>
-      </RectButton>
+      <TouchableNativeFeedback onPress={onPress} background={rippleEffect}>
+        <View style={styles.itemWrapper}>
+          <Text style={styles.itemTitle}>{note.title}</Text>
+          <Text style={styles.itemDate}>
+            Criado em {note.createdAt.getDate()}/{note.createdAt.getMonth()}/{note.createdAt.getFullYear()}
+          </Text>
+        </View>
+      </TouchableNativeFeedback>
     </Swipeable>
   )
 }
