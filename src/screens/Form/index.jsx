@@ -1,6 +1,6 @@
 import React, { useContext, useEffect, useRef, useState } from 'react'
 import { SafeAreaView, ScrollView, View } from 'react-native'
-import { RectButton } from 'react-native-gesture-handler'
+import { BorderlessButton, RectButton } from 'react-native-gesture-handler'
 import { useNavigation, useRoute } from '@react-navigation/native'
 import { Feather } from '@expo/vector-icons'
 import { NotesContext } from '../../contexts'
@@ -26,6 +26,10 @@ const Form = () => {
     goBack()
   }
 
+  const handleCancel = () => {
+    goBack()
+  }
+
   useEffect(() => {
     if (noteId) {
       const { body, title } = notes.find(({ id }) => noteId === id) // eslint-disable-line no-shadow
@@ -37,9 +41,13 @@ const Form = () => {
 
   return (
     <SafeAreaView style={styles.formScreen}>
-      <RectButton style={styles.roundedBtn} onPress={handleSaveNote}>
+      <RectButton style={styles.okButton} onPress={handleSaveNote}>
         <Feather name="check" size={40} color="white" />
       </RectButton>
+
+      <BorderlessButton style={styles.cancelButton} onPress={handleCancel}>
+        <Feather name="x" size={30} color="white" />
+      </BorderlessButton>
 
       <TextInput
         size={32}

@@ -20,6 +20,9 @@ const Routes = () => (
       <Stack.Screen
         name="Form"
         component={Form}
+        options={{
+          headerShown: false,
+        }}
       />
     </Stack.Navigator>
   </NavigationContainer>
