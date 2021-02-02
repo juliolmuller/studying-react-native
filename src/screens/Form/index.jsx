@@ -26,10 +26,6 @@ const Form = () => {
     goBack()
   }
 
-  const handleCancel = () => {
-    goBack()
-  }
-
   useEffect(() => {
     if (noteId) {
       const { body, title } = notes.find(({ id }) => noteId === id) // eslint-disable-line no-shadow
@@ -45,7 +41,7 @@ const Form = () => {
         <Feather name="check" size={40} color="white" />
       </RectButton>
 
-      <BorderlessButton style={styles.cancelButton} onPress={handleCancel}>
+      <BorderlessButton style={styles.cancelButton} onPress={goBack}>
         <Feather name="x" size={30} color="white" />
       </BorderlessButton>
 
