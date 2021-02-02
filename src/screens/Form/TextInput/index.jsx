@@ -22,7 +22,7 @@ const TextInput = forwardRef(({ onBlur, onFocus, size, ...props }, ref) => {
     setStyle(styles.focusedInput)
     onFocus?.(...args)
   }
-  console.log(props)
+
   return (
     <NativeTextInput
       style={activeStyle}

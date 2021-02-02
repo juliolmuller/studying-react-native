@@ -9,11 +9,7 @@ import styles from './styles'
 
 const Start = () => {
   const { navigate } = useNavigation()
-  const { notes } = useContext(NotesContext)
-
-  const handleDelete = (noteId) => {
-    console.log(`Deleting ${noteId}`)
-  }
+  const { notes, destroyNote } = useContext(NotesContext)
 
   return (
     <SafeAreaView style={styles.startScreen}>
@@ -27,7 +23,7 @@ const Start = () => {
         renderItem={({ item }) => (
           <NoteItem
             note={item}
-            onDelete={() => handleDelete(item.id)}
+            onDelete={() => destroyNote(item.id)}
             onPress={() => navigate('Form', item.id)}
           />
         )}

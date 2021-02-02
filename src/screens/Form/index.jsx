@@ -11,11 +11,18 @@ const Form = () => {
   const bodyTextInput = useRef()
   const noteId = useRoute().params
   const { goBack } = useNavigation()
-  const { notes } = useContext(NotesContext)
   const [title, setTitle] = useState('')
   const [body, setBody] = useState('')
+  const { notes, createNote, updateNote } = useContext(NotesContext)
 
   const handleSaveNote = () => {
+    const note = { id: noteId, title, body }
+
+    if (noteId) {
+      updateNote(note)
+    } else {
+      createNote(note)
+    }
     goBack()
   }
 

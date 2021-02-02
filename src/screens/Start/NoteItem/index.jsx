@@ -26,7 +26,7 @@ const NoteItem = ({ note, onDelete, onPress }) => {
         <View style={styles.itemWrapper}>
           <Text style={styles.itemTitle}>{note.title}</Text>
           <Text style={styles.itemDate}>
-            Criado em {note.createdAt.getDate()}/{note.createdAt.getMonth()}/{note.createdAt.getFullYear()}
+            Alterado em {note.modifiedAt.getDate()}/{note.modifiedAt.getMonth()}/{note.modifiedAt.getFullYear()}
           </Text>
         </View>
       </TouchableNativeFeedback>
