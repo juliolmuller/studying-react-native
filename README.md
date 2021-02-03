@@ -33,6 +33,7 @@ The intent was to create a simple notes application with CRUD operations (create
 - React Native Navigation (stack mode);
 - React Context API (including `useContext` hook);
 - `useReducer` hooks to dispatch actions;
+- Babel plugin `jsx-control-statements`!!! AWESOME 😍
 
 ## :rocket: Technologies & Resources
 
