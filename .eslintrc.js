@@ -1,5 +1,4 @@
 /* eslint-env node */
-
 module.exports = {
   root: true,
   env: {
@@ -7,6 +6,7 @@ module.exports = {
   },
   extends: [
     'plugin:react/recommended',
+    'plugin:jsx-control-statements/recommended',
     '@lacussoft',
   ],
   globals: {
@@ -25,12 +25,14 @@ module.exports = {
     'react',
     'react-hooks',
     'react-native',
+    'jsx-control-statements',
   ],
   rules: {
     'no-console': process.env.NODE_ENV === 'production' ? 'error' : 'off',
     'no-use-before-define': 'off',
     'react/jsx-indent-props': ['error', 2],
     'react/jsx-closing-bracket-location': 'error',
+    'react/jsx-no-undef': [2, { allowGlobals: true }],
     'react/prop-types': 'off',
   },
 }
