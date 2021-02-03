@@ -27,13 +27,15 @@
     "react-native-web": "^0.14.11"
   },
   "devDependencies": {
-    "@babel/core": "^7.12.3",
+    "@babel/core": "^7.12.13",
     "@lacussoft/eslint-config": "^1.0.1",
     "babel-eslint": "^10.1.0",
+    "babel-plugin-jsx-control-statements": "^4.1.0",
     "eslint": "^7.19.0",
+    "eslint-plugin-jsx-control-statements": "^2.2.1",
     "eslint-plugin-react": "^7.22.0",
     "eslint-plugin-react-hooks": "^4.2.0",
     "eslint-plugin-react-native": "^3.10.0",
-    "expo-cli": "^4.1.4"
+    "expo-cli": "^4.1.6"
   }
 }
