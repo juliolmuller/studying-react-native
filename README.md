@@ -1,25 +1,61 @@
-Tecnologia em Análise e Desenvolvimento de Sistemas
+<h1 align="center">
+  :books: Simple CRUD with React Native
+</h1>
 
-Setor de Educação Profissional e Tecnológica - SEPT
+<p align="center">
+  <a href="#trophy-lessons-learned">Lessons Learned</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#rocket-technologies--resources">Technologies</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#hammer-setting-up-the-environment">Environment Setup</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#zap-features">Features</a>
+</p>
 
-Universidade Federal do Paraná - UFPR
+<p align="center">
+  <img src="https://img.shields.io/static/v1?labelColor=000000&color=8257e5&label=created%20at&message=Jan%202021" alt="Creation Date" />
 
----
+  <img src="https://img.shields.io/github/last-commit/juliolmuller/studying-react-native-crud?label=updated%20at&labelColor=000000&color=8257e5" alt="Update Date" />
 
-*DS151 - Desenvolvimento para Dispositivos Móveis*
+  <img src="https://img.shields.io/github/v/tag/juliolmuller/studying-react-native-crud?label=latest%20version&labelColor=000000&color=8257e5" alt="Latest Version" />
 
-Prof. Alexander Robert Kutzke
+  <img src="https://img.shields.io/static/v1?labelColor=000000&color=8257e5&label=PRs&message=welcome" alt="Pull Requests Welcome" />
 
-* [Instruções para submissão de tarefas e trabalhos](https://gitlab.tadsufpr.net.br/ds122-alexkutzke/material/blob/master/instrucoes_submissao_tarefas_e_trabalhos.md)
-* [Video aula](https://www.youtube.com/watch?v=d6ZTnQNhoCo)
+  <img src="https://img.shields.io/github/license/juliolmuller/studying-react-native-crud?labelColor=000000&color=8257e5" alt="Project License" />
+</p>
 
-# Atividade Notas
+![Application snapshot](./src/images/app-overview.jpg)
 
-Crie uma aplicação com o Expo (já inicializada nesse repositório) e que tenha o React Navigation configurado com navegação do tipo Stack.
+Application developed as an assignment to college, subject Development for Mobile Devices, at UFPR, in order to learn building **React Native** applications. The project seeks to apply knowledge in functional components, screens navigation, Context API and reducers; This application is fully offline (no external data fetching).
 
-A aplicação deve ser capaz de realizar um CRUD (criar, alterar, ler e remover) anotações (pequenos textos com um título e um conteúdo). 
-Cada operação deve ter a sua própria tela com exceção da remoção, que pode ser realizada junto com a listagem das notas.
+The intent was to create a simple notes application with CRUD operations (create, read, update & delete) to explore the React API in mobile devices environment. We should have a screen to display a list of existing notes, feature to delete notes and features to see/edit new or existing notes in another screen. The state should be managed by **React Context API** and changes dispatched to a reducer.
 
-**Requisito principal**: as anotações devem ser armazenadas por meio de Reducer Hooks e Contexto e compartilhadas entre as diferentes telas da aplicação.
+## :trophy: Lessons Learned
 
-Layout e demais detalhes são livres. ;)
+- Build a swipeable component;
+- React Native Navigation (stack mode);
+- React Context API (including `useContext` hook);
+- `useReducer` hooks to dispatch actions;
+
+## :rocket: Technologies & Resources
+
+**Frontend:**
+- React Native
+- Expo Framework
+
+**Development:**
+- Visual Studio Code
+- NPM routines
+
+## :hammer: Setting up the Environment
+
+Make sure to have **Node.js 10+** installed in your machine and its **npm** available in the command line, then use the following routines:
+
+```bash
+$ npm install   # download all dependencies
+$ npm start     # run development server
+```
+
+## :zap: Features
+
+- [x] List all existing notes;
+- [x] Delete a note by swiping left/right;
+- [x] Create new note with title and body; and
+- [x] Editing existing note.
