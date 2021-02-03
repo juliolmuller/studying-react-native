@@ -5,9 +5,9 @@ import { mapActions } from './actions'
 
 const initialState = {
   notes: [
-    noteFactory('Vue', 'Vue is the coolest framework!'),
-    noteFactory('Nuxt', 'Check main SSR option for Vue'),
-    noteFactory('Vuex', 'Check out Composition API for new patterns.'),
+    noteFactory('Vue Composition API', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'),
+    noteFactory('React Hooks 😖', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'),
+    noteFactory('Why TypeScript?', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'),
   ],
 }
 
