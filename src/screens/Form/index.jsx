@@ -14,6 +14,7 @@ const Form = () => {
   const [title, setTitle] = useState('')
   const [body, setBody] = useState('')
   const { notes, createNote, updateNote } = useContext(NotesContext)
+  const canSave = Boolean(title || body)
 
   const handleSaveNote = () => {
     const note = { id: noteId, title, body }
@@ -37,9 +38,11 @@ const Form = () => {
 
   return (
     <SafeAreaView style={styles.formScreen}>
-      <RectButton style={styles.okButton} onPress={handleSaveNote}>
-        <Feather name="check" size={40} color="white" />
-      </RectButton>
+      {canSave && (
+        <RectButton style={styles.okButton} onPress={handleSaveNote}>
+          <Feather name="check" size={40} color="white" />
+        </RectButton>
+      )}
 
       <BorderlessButton style={styles.cancelButton} onPress={goBack}>
         <Feather name="x" size={30} color="white" />
