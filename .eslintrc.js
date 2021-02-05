@@ -2,10 +2,12 @@
 module.exports = {
   root: true,
   env: {
-    es6: true,
+    'es6': true,
+    'react-native/react-native': true,
   },
   extends: [
     'plugin:react/recommended',
+    'plugin:react-native/all',
     'plugin:jsx-control-statements/recommended',
     '@lacussoft',
   ],
@@ -22,6 +24,7 @@ module.exports = {
     sourceType: 'module',
   },
   plugins: [
+    'import',
     'react',
     'react-hooks',
     'react-native',
